@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_file_name"
+        android:text="File Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"/>
+
+    <FrameLayout
+        android:id="@+id/exo_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/exo_styled_bottom_bar_margin_top"
+        android:background="@color/exo_bottom_bar_background">
+
+        <LinearLayout
+            android:id="@+id/exo_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:layoutDirection="ltr"
+            android:paddingStart="@dimen/exo_styled_bottom_bar_time_padding"
+            android:paddingLeft="@dimen/exo_styled_bottom_bar_time_padding"
+            android:paddingEnd="@dimen/exo_styled_bottom_bar_time_padding"
+            android:paddingRight="@dimen/exo_styled_bottom_bar_time_padding">
+
+            <TextView
+                android:id="@+id/exo_position"
+                style="@style/ExoStyledControls.TimeText.Position" />
+
+            <TextView
+                style="@style/ExoStyledControls.TimeText.Separator" />
+
+            <TextView
+                android:id="@+id/exo_duration"
+                style="@style/ExoStyledControls.TimeText.Duration" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exo_basic_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layoutDirection="ltr">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/exo_screen_ratio"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_aspect_ratio"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@+id/exo_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/exo_styled_progress_layout_height"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/exo_styled_progress_margin_bottom"
+        app:ad_marker_width="@dimen/marker_width"
+        app:bar_gravity="bottom"
+        app:bar_height="@dimen/exo_styled_progress_bar_height"
+        app:scrubber_dragged_size="@dimen/exo_styled_progress_dragged_thumb_size"
+        app:scrubber_enabled_size="@dimen/exo_styled_progress_enabled_thumb_size"
+        app:touch_target_height="@dimen/exo_styled_progress_touch_target_height" />
+
+    <LinearLayout
+        android:id="@+id/exo_center_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="@dimen/exo_styled_controls_padding">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/exo_rew"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_replay"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/exo_play"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_play_video"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/exo_pause"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_pause_video"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/exo_ffwd"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_forward"/>
+    </LinearLayout>
+</merge>

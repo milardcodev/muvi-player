@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/myMusic"
+        android:title="My Music"
+        android:icon="@drawable/ic_headphones"/>
+    <item
+        android:id="@+id/watch"
+        android:title="Watch"
+        android:icon="@drawable/ic_video"/>
+</menu>
